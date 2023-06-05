@@ -1,5 +1,4 @@
-﻿# -*- coding: utf-8 -*-
-import dlib
+﻿import dlib
 import cv2
 import numpy as np
 
@@ -92,7 +91,7 @@ while (cap.isOpened()):
 
         # Determination of fatigue: based on whether more than half of the elements in the time series are below the threshold
         if sum(queue) > len(queue)/2:
-            cv2.putText(img, "WARNING !", (100, 100),
+            cv2.putText(img, "WARNING!", (100, 100),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, cv2.LINE_AA)
         else:
             cv2.putText(img, "SAFE", (100, 100), cv2.FONT_HERSHEY_SIMPLEX,
